@@ -5,7 +5,7 @@
 This repository contains container disks which you can use to run Ubuntu VMs inside
 a Kubernetes cluster, using KubeVirt.
 
-For example, you can use this YAML template to create a VM running Ubuntu 18.04,
+For example, you can use this YAML template to create a VM running Ubuntu 16.04,
 to which you can connect with a user named `kubevirt` and a password of `kubevirt`.
 
 ```
@@ -37,7 +37,7 @@ spec:
   volumes:
     - name: containervolume
       containerDisk:
-        image: quay.io/quamotion/ubuntu-container-disk:18.04
+        image: quay.io/quamotion/ubuntu-container-disk:16.04
     - name: cloudinitvolume
       cloudInitNoCloud:
         userData: |-
